@@ -1,0 +1,447 @@
+:root {
+    --s: #4563f7;
+    --grisoscuro: #060301;
+    --gris-claro: rgb(151, 150, 150);
+    --naranja: #ff4000;
+    --naranja-oscuro: #ff1702;
+    --celeste-claro: #008cff;
+    --celeste-oscuro: #0d10cf;
+    --celeste-more: #1c1fc4;
+    --blanco-hueso: #f6f6f6;
+    --azul: rgb(1, 1, 8);
+}
+
+main {
+    margin-top: 45px;
+}
+
+.news h1 {
+    animation: ShowUp 0.6s ease forwards;
+}
+
+.news h1~p {
+    animation: ShowUp 0.8s 0.2s ease forwards;
+    opacity: 0;
+    width: 90%;
+}
+
+.news {
+    padding-top: 10px;
+    padding-bottom: 80px;
+    z-index: 100;
+    position: relative;
+    background: #fff;
+}
+
+.news-telegram {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 45px;
+    animation: opacity 0.8s 0.3s ease forwards;
+    opacity: 0;
+}
+
+.news-telegram a {
+    padding: 7px 20px;
+    background: var(--grisoscuro);
+    font-size: 0.85em;
+    border-radius: 20px;
+    color: var(--celeste-claro);
+    box-shadow: 4px 10px 30px -6px rgba(0, 0, 0, 0.22);
+    font-weight: 600;
+    transition: 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.news-principal {
+    margin: 30px 0;
+}
+
+.news-principal .swiper-container {
+    width: 100%;
+    height: 100%;
+    transition: 0.3s ease;
+    max-width: 1600px;
+    margin: auto;
+}
+
+.news-principal .swiper-slide {
+    height: 500px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 87% !important;
+    position: relative;
+    max-width: 1100px;
+    overflow: hidden;
+    background: #000;
+}
+
+.news-principal .swiper-wrapper {
+    transition: cubic-bezier(0.4, 0, 0.25, 1) 600ms !important;
+}
+
+.news-h2 {
+    color: #fff;
+    font-size: 1.9em;
+    font-weight: 700;
+    margin-top: 50px;
+}
+
+.news-h2~span {
+    color: #fff;
+    font-weight: 400;
+    margin: 5px 0;
+    margin-bottom: 20px;
+    display: block;
+    opacity: 0.6;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    display: none !important;
+}
+
+.swiper-pagination {
+    margin-top: 10px;
+}
+
+.news-principal a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    z-index: 350;
+    transition: 1s ease !important;
+}
+
+.news-principal a::after {
+    content: "";
+    height: 300px;
+    width: 100%;
+    position: absolute;
+    z-index: 300;
+    bottom: 0;
+    left: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: linear-gradient(to top, #000, transparent);
+}
+
+.news-principal .swiper-slide img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: 0.4s ease;
+}
+
+.swiper-slide-active .principal-des {
+    transform: none;
+    opacity: 1;
+}
+
+.principal-des {
+    opacity: 0;
+    transform: translateY(30px);
+    position: absolute;
+    z-index: 400;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    padding-bottom: 30px;
+    transition: 0.5s 0.4s ease;
+}
+
+.principal-des h3 {
+    text-align: left;
+    width: 100%;
+    color: #fff;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.principal-des time {
+    margin-left: 7px;
+    padding-left: 12px;
+    border-left: 2px solid #fff;
+    color: #fff;
+    font-weight: 300;
+    font-size: 0.8em;
+}
+
+.news-main {
+    padding: 50px 0 25px 0;
+    background: var(--blanco-hueso);
+}
+
+.news-main-container {
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+}
+
+.main-card {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px dashed rgb(190, 190, 190);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-card-img {
+    width: 40%;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 4px 10px 30px -6px rgba(0, 0, 0, 0.22);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.main-card-img img {
+    object-fit: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.4s ease;
+}
+
+.main-card-des {
+    width: 55%;
+}
+
+.main-card-des h3 {
+    margin: 3px 0;
+    font-weight: 700;
+    font-size: 1.3em;
+}
+
+.main-card-des time {
+    font-size: 0.7em;
+    font-weight: 600;
+    color: rgb(145, 145, 145);
+    letter-spacing: 1px;
+}
+
+.main-card-des .more {
+    text-align: left;
+    margin-top: 7px;
+}
+
+.main-card-des .more a {
+    text-decoration: none;
+}
+
+.category-iglesia,
+.category-fundacion,
+.category-musik {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.category-iglesia {
+    color: var(--naranja-oscuro);
+}
+
+.category-fundacion {
+    color: var(--celeste-oscuro);
+}
+
+.category-musik {
+    font-size: 0.9em;
+    color: #3f779d;
+}
+
+.category-iglesia-circle,
+.category-fundacion-circle,
+.category-musik-circle {
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 0.8em;
+}
+
+.category-iglesia-circle {
+    background: var(--naranja-oscuro);
+}
+
+.category-fundacion-circle {
+    background: var(--celeste-oscuro);
+}
+
+.category-musik-circle {
+    font-size: 0.9em;
+    background: #3f779d;
+}
+
+.archive .more:last-child {
+    margin-top: 50px;
+    margin-bottom: 90px;
+}
+
+@media screen and (min-width:425px) {
+    .principal-des {
+        font-size: 1.1em;
+    }
+    .principal-des h3 {
+        font-size: 1.8em;
+    }
+}
+
+@media screen and (min-width:760px) {
+    .news {
+        padding-bottom: 120px;
+    }
+    .news-title {
+        font-size: 1.1em;
+    }
+    .news-h2 {
+        font-size: 2.5em;
+    }
+    .news-h2~span {
+        font-size: 1.4em;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: flex !important;
+    }
+    .swiper-pagination {
+        display: none;
+    }
+    .principal-des {
+        font-size: 1.2em;
+        padding: 30px;
+    }
+    .principal-des h3 {
+        font-size: 2.45em;
+    }
+    .news-main-container {
+        max-width: 90%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+    .main-card {
+        margin: 0;
+    }
+    .main-card:nth-child(5),
+    .main-card:nth-child(6) {
+        border: 0;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .news-h2 {
+        font-size: 3.5em;
+        margin-top: 80px;
+    }
+    .news-h2~span {
+        font-size: 1.9em;
+    }
+    .news-principal .swiper-slide {
+        height: 500px;
+    }
+    .news-principal .swiper-wrapper {
+        transition: all cubic-bezier(0.4, 0, 0.25, 1) 900ms !important;
+    }
+    .news-principal a::after {
+        background: linear-gradient(to top, #000, rgba(0, 0, 0, 0.624), transparent);
+    }
+    .news-principal .swiper-slide:hover img {
+        transform: scale(1.05);
+    }
+    .news h1~p {
+        font-size: 1.3em;
+    }
+    .main-card-img:hover img {
+        opacity: 0.9;
+        transform: scale(1.1);
+    }
+    .news-main {
+        padding-bottom: 100px;
+    }
+    .main-card-des .more a:hover {
+        text-decoration: underline;
+    }
+    .news-telegram {
+        margin-top: 30px;
+    }
+    .news-telegram a {
+        font-size: 1.1em;
+        padding: 10px 25px;
+    }
+    .news-telegram a:hover {
+        transform: scale(1.05);
+        text-decoration: underline;
+    }
+}
+
+@media screen and (min-width:1250px) {
+    .news-h2 {
+        font-size: 4.9em;
+    }
+    .news-h2~span {
+        font-size: 2.3em;
+        margin-bottom: 30px;
+    }
+    .news-principal .swiper-slide {
+        height: 600px;
+    }
+    .news h1~p {
+        font-size: 1.5em;
+    }
+    .news {
+        padding-bottom: 150px;
+    }
+    .principal-des {
+        font-size: 1.4em;
+        padding: 40px;
+    }
+    .principal-des h3 {
+        font-size: 3em;
+    }
+    .main-card-img {
+        height: 230px;
+    }
+    .main-card-des time {
+        font-size: 0.85em;
+        margin-top: 5px;
+        display: inline-block;
+    }
+    .main-card-des h3 {
+        font-size: 2.25em;
+    }
+    .main-card-des p {
+        font-size: 1.3em;
+        margin: 15px 0;
+    }
+    .main-card-des a {
+        color: var(--celeste-claro);
+        font-weight: 600;
+    }
+    .category-iglesia,
+    .category-fundacion,
+    .category-musik {
+        font-size: 1.1em;
+    }
+    .category-musik {
+        font-size: 1em;
+    }
+    .news-main-container {
+        max-width: 1400px;
+        margin: auto;
+        gap: 40px;
+    }
+    .main-card {
+        padding-bottom: 40px;
+    }
+}

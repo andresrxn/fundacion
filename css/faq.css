@@ -1,0 +1,329 @@
+:root {
+    --s: #4563f7;
+    --grisoscuro: #060301;
+    --gris-claro: rgb(151, 150, 150);
+    --naranja: #ff4000;
+    --naranja-oscuro: #ff1702;
+    --celeste-claro: #008cff;
+    --celeste-oscuro: #0d10cf;
+    --celeste-more: #1c1fc4;
+    --blanco-hueso: #f4f4f4;
+    --azul: rgb(1, 1, 8);
+}
+
+body {
+    background: var(--blanco-hueso) !important;
+}
+
+.faq {
+    margin: auto;
+    padding-top: 60px;
+    padding-bottom: 100px;
+    background: #fff;
+}
+
+.faq h1 {
+    animation: ShowUp 0.6s ease forwards;
+}
+
+.faq-span {
+    font-weight: 600;
+    font-size: 1.2em;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #000;
+    animation: ShowUp 0.6s 0.2s ease forwards;
+    opacity: 0;
+}
+
+.faq .icon {
+    transition: 0.35s ease;
+    color: var(--naranja-oscuro);
+}
+
+.division .icon {
+    background: #fff !important;
+}
+
+.categorias {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 30px auto;
+    width: 85%;
+}
+
+.categoria {
+    cursor: pointer;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    background: #fff;
+    font-size: 0.9em;
+    box-shadow: 4px 10px 40px -6px rgba(0, 0, 0, 0.15);
+    transition: .3s ease all;
+    color: var(--gris-claro);
+}
+
+.categoria p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: ease;
+    font-weight: 600;
+}
+
+.categoria .icon {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 2.1em;
+}
+
+.categoria path {
+    fill: var(--gris-claro);
+    transition: .3s ease all;
+}
+
+.categoria p span {
+    display: block;
+}
+
+.categoria.activa {
+    color: var(--celeste-oscuro);
+    box-shadow: 4px 10px 40px -6px rgba(0, 0, 0, 0.2);
+    transform: scale(1.08);
+    border-radius: 10px;
+}
+
+.categoria.activa>p {
+    font-weight: 700;
+}
+
+.categoria.activa path {
+    fill: var(--celeste-oscuro);
+}
+
+
+/*! ============= Contenedor Preguntas ============= */
+
+.contenedor-preguntas {
+    display: none;
+    grid-template-columns: 1fr;
+    max-width: 1100px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.contenedor-preguntas p {
+    text-align: left;
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.contenedor-preguntas.activo {
+    display: grid;
+}
+
+.contenedor-pregunta {
+    padding: 20px 5px;
+    border-bottom: 1px solid rgb(218, 218, 218);
+    overflow: hidden;
+    transition: ease all;
+    cursor: pointer;
+    text-align: left;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+
+/*! ============= Preguntas ============= */
+
+.pregunta {
+    font-weight: 700;
+    line-height: 20px;
+    display: flex;
+    line-height: 1.5;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.respuesta {
+    color: #6e6e6e;
+    line-height: 1.8;
+    max-height: 0;
+    font-weight: 500;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+
+.respuesta a {
+    color: var(--celeste-claro);
+}
+
+.pregunta .icon {
+    margin-left: 10px;
+    min-width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border: 2px solid var(--naranja-oscuro);
+    border-radius: 50%;
+    padding: 4px;
+}
+
+.contenedor-pregunta.activa .respuesta {
+    margin-top: 20px;
+}
+
+.contenedor-pregunta.activa .icon {
+    transform: rotate(-45deg);
+}
+
+
+/*! =================================================*/
+
+
+/*! ============= Responsive Design ============= */
+
+
+/*! =================================================*/
+
+.faq-contact {
+    background: var(--blanco-hueso);
+    padding: 20px;
+    padding-bottom: 60px;
+}
+
+.faq-contact p {
+    margin: 0;
+    padding: 30px 15px;
+    border-radius: 20px;
+    box-shadow: 4px 12px 40px 6px rgba(0, 0, 0, 0.12);
+    width: 90%;
+    max-width: 300px;
+    margin: auto;
+    font-size: 1em;
+    font-weight: 600;
+    transition: 0.2s ease;
+    background: #fff;
+    position: relative;
+    z-index: 200;
+}
+
+.faq-contact p span {
+    display: block;
+    margin-bottom: 3px;
+}
+
+.faq-contact p a {
+    color: var(--celeste-claro);
+}
+
+.faq-contact p:active {
+    transform: scale(0.95);
+}
+
+@media screen and (min-width:500px) {
+    .categorias {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 15px;
+    }
+}
+
+@media screen and (min-width:760px) {
+    .faq {
+        padding-bottom: 170px;
+    }
+    .faq-span {
+        font-size: 1.5em;
+    }
+    .faq-contact {
+        padding-top: 0px;
+        padding-bottom: 90px;
+    }
+    .faq-contact p {
+        font-size: 1.2em;
+    }
+    .categoria p {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (min-width:950px) {
+    .categorias {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 30px;
+    }
+    .categoria {
+        padding: 20px;
+        font-size: 1em;
+    }
+    .preguntas {
+        margin-top: 50px;
+    }
+    .contenedor-pregunta .respuesta {
+        color: #6e6e6e;
+        line-height: 1.8;
+        font-weight: 500;
+        font-size: 1.3em;
+    }
+    .pregunta .icon {
+        margin-left: 10px;
+        min-width: 35px;
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        border: 2px solid #000;
+        color: #000;
+        border-radius: 50%;
+        padding: 6px;
+    }
+    .faq-contact {
+        padding-bottom: 150px;
+    }
+    .faq-contact p {
+        font-size: 1.6em;
+        padding: 40px 35px;
+        max-width: 450px;
+        z-index: 1500;
+    }
+    .faq-contact a {
+        text-decoration: none;
+    }
+    .faq-contact a:hover {
+        text-decoration: underline;
+    }
+    .faq-contact a .icon {
+        transition: 0.2s ease;
+    }
+    .faq-contact a:hover .icon {
+        transform: translateX(5px);
+    }
+    .contenedor-pregunta:hover {
+        color: var(--naranja);
+    }
+    .contenedor-pregunta:hover .icon {
+        color: var(--naranja);
+        border: 2px solid var(--naranja-oscuro);
+        transition: 0.3s ease;
+    }
+    .contenedor-pregunta .icon {
+        padding: 7px;
+    }
+    .categoria:hover .icon {
+        transform: translateY(-5px);
+    }
+    .contenedor-preguntas p {
+        font-size: 1.7em;
+        padding: 5px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .faq-span {
+        font-size: 2em;
+    }
+}

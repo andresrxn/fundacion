@@ -1,0 +1,446 @@
+:root {
+    --s: #4563f7;
+    --grisoscuro: #060301;
+    --gris-claro: rgb(151, 150, 150);
+    --naranja: #ff4000;
+    --naranja-oscuro: #ff1702;
+    --celeste-claro: #008cff;
+    --celeste-oscuro: #0d10cf;
+    --celeste-more: #1c1fc4;
+    --blanco-hueso: #F5F5F7;
+    --azul: rgb(1, 1, 8);
+}
+
+main {
+    margin-top: 45px;
+}
+
+.banner-contact {
+    padding: 10px 0;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-contact h2 {
+    margin-top: 10px;
+    opacity: 0;
+    font-size: 1.2em;
+    overflow: hidden !important;
+}
+
+.banner-contact h2 span {
+    font-weight: 700;
+}
+
+.banner-contact p {
+    font-size: 0.8em;
+    font-weight: 500;
+    background: rgb(19, 19, 19);
+    color: var(--blanco-hueso);
+    text-align: center;
+    width: auto;
+    margin-top: 20px;
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 50px;
+    opacity: 0;
+}
+
+#form {
+    width: 90% !important;
+    background: var(--blanco-hueso);
+    margin-top: 25px !important;
+    border-radius: 30px !important;
+    /* box-shadow: 4px 12px 40px 6px rgba(0, 0, 0, 0.12); */
+}
+
+#form .contact-img {
+    padding: 5px !important;
+}
+
+.contact-msg {
+    padding-bottom: 40px;
+}
+
+.msg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 0;
+    width: 100%;
+    margin: auto;
+}
+
+.msg-phone p {
+    width: 100%;
+    display: block;
+}
+
+.msg-phone span:first-child,
+.msg-chat span:first-child {
+    display: block;
+    font-weight: 500;
+    font-size: 1.1em;
+    padding-bottom: 5px;
+}
+
+.msg-chat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10px;
+    width: 80%;
+    margin: auto;
+    max-width: 1200px;
+    margin-top: 10px;
+}
+
+.msg-chat>div {
+    width: 100%;
+}
+
+.msg-phone a {
+    color: var(--grisoscuro);
+    text-decoration-color: var(--naranja-oscuro);
+    font-size: 1.5em;
+    transition: 0.2s ease;
+}
+
+.msg-phone a:active {
+    transform: scale(0.95);
+}
+
+.msg-phone a .icon {
+    color: var(--naranja-oscuro);
+    margin-right: 4px;
+}
+
+.msg-card {
+    width: 100%;
+    margin: auto;
+    margin: 15px auto;
+    height: 60px;
+    border-radius: 50px;
+    box-shadow: 4px 12px 40px 6px rgba(0, 0, 0, 0.12);
+    transition: 0.1s ease;
+    background: #fff;
+    max-width: 400px;
+    opacity: 0;
+}
+
+.msg-card:active {
+    transform: scale(0.95);
+}
+
+.msg-card a {
+    font-weight: 600;
+    font-size: 1.35em;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.msg-card a .icon {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.msg-card:nth-child(1) a {
+    background: var(--celeste-claro);
+}
+
+.msg-card:nth-child(2) a {
+    background: var(--celeste-oscuro);
+}
+
+.msg-card:nth-child(3) a {
+    background: rgb(20, 204, 36);
+}
+
+.msg-faq {
+    font-size: 0.9em;
+    margin-top: 15px;
+    text-align: center;
+    color: #777;
+    line-height: 1.5;
+}
+
+.msg-faq a {
+    color: var(--celeste-claro);
+}
+
+.loc {
+    background: var(--blanco-hueso);
+    margin-bottom: -40px;
+}
+
+.loc .section-waves {
+    top: -1px;
+    overflow: visible;
+}
+
+.loc .section-waves svg {
+    filter: drop-shadow(3px 50px 20px #0000003a);
+}
+
+.loc .section-waves-two {
+    top: 25px;
+    opacity: 0.6;
+}
+
+.loc-map {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.loc-map>img {
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    object-position: 48%;
+}
+
+.loc-name {
+    position: absolute;
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    filter: drop-shadow(4px 10px 40px #0000009a);
+}
+
+.loc-name::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-right: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 15px solid #fff;
+    position: absolute;
+    top: -20px;
+    left: 47%;
+    z-index: 200;
+}
+
+.loc-name img {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.loc-name span {
+    width: 3px;
+    border-radius: 50px;
+    height: 20px;
+    background: rgb(206, 206, 206);
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.loc-name p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.loc-map .more {
+    position: absolute;
+    margin-top: 170px;
+}
+
+@media screen and (min-width:760px) {
+    .banner-contact h2 {
+        font-size: 1.5em;
+    }
+    .banner-contact p {
+        font-size: 0.9em;
+    }
+    .contact-msg {
+        padding-bottom: 50px;
+    }
+    .media-container {
+        padding-bottom: 80px;
+    }
+    .msg-container {
+        max-width: 1300px;
+        margin: auto;
+    }
+    .msg-phone p span:first-child {
+        font-size: 1.4em;
+    }
+    .msg-phone p a {
+        font-size: 1.6em;
+    }
+    .msg-chat {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 95%;
+    }
+    .msg-chat>div {
+        display: flex;
+        flex-direction: row;
+    }
+    .msg-faq {
+        margin-top: 30px;
+    }
+    .msg-card {
+        margin: 0 10px;
+    }
+    #form {
+        width: 80%;
+    }
+    #form img {
+        max-width: 400px;
+    }
+    .loc p {
+        font-size: 1.4em;
+    }
+}
+
+@media screen and (min-width:950px) {
+    .banner-contact h2 {
+        font-size: 2.2em;
+        margin-top: 15px;
+    }
+    .banner-contact p {
+        font-size: 0.9em;
+    }
+    .msg-phone span:first-child {
+        font-size: 1.85em !important;
+    }
+    .msg-phone a {
+        font-size: 2em !important;
+    }
+    .msg-card {
+        height: 80px;
+        margin-top: 20px;
+    }
+    .msg-chat a {
+        text-decoration: none;
+        transition: 0.3s ease;
+        font-size: 1.5em;
+    }
+    .msg-chat a:hover {
+        text-decoration: underline;
+        transform: scale(1.03);
+    }
+    form {
+        border-radius: 20px;
+        flex-direction: row;
+        align-items: flex-start;
+        width: 90%;
+        max-width: 1500px;
+        padding-right: 25px;
+        padding-top: 20px;
+    }
+    form img {
+        max-width: 500px;
+    }
+    form .contact-img {
+        width: 50%;
+        margin-top: 25px;
+    }
+    form .form-container {
+        overflow: hidden;
+        width: 50%;
+    }
+    form select,
+    form select option {
+        cursor: pointer;
+    }
+    form select option:hover {
+        background: var(--celeste-claro);
+        color: var(--grisoscuro);
+    }
+    .form-group-input {
+        height: 40px;
+    }
+    .contact-img img {
+        margin: 0;
+    }
+    form {
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 40px;
+    }
+    form>div {
+        overflow: hidden;
+    }
+    .form-submit input {
+        transition: 0.2s ease;
+    }
+    .form-submit input:hover {
+        opacity: 0.8;
+    }
+    .loc-map>img {
+        height: 900px;
+    }
+    .loc-name {
+        margin-top: 100px;
+        padding: 10px 20px;
+    }
+    .loc-name:after {
+        top: -25px;
+    }
+    .loc-name p {
+        font-size: 1.7em;
+    }
+    .loc-name img {
+        width: 30px;
+        margin-right: 10px;
+    }
+    .loc-name span {
+        height: 30px;
+        margin-right: 10px;
+    }
+    .loc-map .more {
+        margin-top: 220px;
+    }
+}
+
+@media screen and (min-width:1020px) {
+    main {
+        margin-top: 60px;
+    }
+    .contact {
+        padding-bottom: 10px !important;
+    }
+    .msg-container {
+        padding-bottom: 0px;
+    }
+    .loc {
+        padding-top: 50px;
+    }
+    .msg-faq {
+        font-size: 1.2em;
+        margin-top: 50px;
+    }
+    #form {
+        padding-top: 40px !important;
+    }
+    #form .contact-img {
+        align-items: flex-start !important;
+        margin: 0 !important;
+        margin-left: -30px !important;
+    }
+    .banner-contact p {
+        font-size: 1.1em;
+        padding: 5px 25px;
+    }
+}
